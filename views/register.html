@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilosregister.css">
+    <link href="/MLiebre/estilosregister.css" rel="stylesheet" type="text/css"/>
+    <base href="/MLiebre/">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- <script src="https://kit.font-awesome.com/b408879bb4.js"></script> -->
+</head>
+<header class="header">
+  <div id="LogoML">
+    <img src="/MLiebre/public/images/logo-mercado-liebre.svg" alt="">
+        <div class="search-container">
+            <input type="text" placeholder="Buscar productos, marcas">
+              <button><i class= "fa magnifying-glass-solid"></i></button>
+              <nav class="Nav-Principal">
+                <ul>
+                    <li><a href="">Ofertas</a></li>
+                    <li><a href="">Tiendas Oficiales</a></li>
+                    <li><a href="">Vender</a></li>
+                    <li><a href="">Ayuda</a></li>
+                </ul>
+                <ul>
+                    <li><a href="">Creá tu cuenta</a> <img src="/MLiebre/public/images/ADRESS NEGRA.svg" alt=""style="width: 16px; height: 16px;"></li>
+                    <li><a href="">Ingresá</a><img src="/MLiebre/public/images/right-to-bracket-solid.svg" alt=""style="width: 16px; height: 16px;"></li>
+                    <li><a href="">Mis compras</a><img src="/MLiebre/public/images/basket-shopping-solid.svg" alt=""style="width: 16px; height: 16px;"></li>
+                </ul>
+            </nav>
+    </div>
+  </div>
+
+</header>
+<body>
+  <h1>Registro de Usuario</h1>
+  <form id="formulario"action="pagina_principal.html" method="post">
+    <label for="nombre_apellido">Nombre y Apellido:</label>
+    <input type="text" id="nombre_apellido" name="nombre_apellido" required><br>
+
+    <label for="nombre_usuario">Nombre de usuario:</label>
+    <input type="text" id="nombre_usuario" name="nombre_usuario" required><br>
+
+    <label for="fecha_nacimiento">Fecha de nacimiento:</label>
+    <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" required><br>
+
+    <label for="domicilio">Domicilio:</label>
+    <input type="text" id="domicilio" name="domicilio" required><br>
+
+    <label for="perfil_usuario">Perfil del usuario:</label>
+    <select id="perfil_usuario" name="perfil_usuario">
+      <option value="comprar">Comprar</option>
+      <option value="vender">Vender</option>
+    </select><br>
+
+    <label for="categorias_interes">Categorías de interés:</label><br>
+    <input type="checkbox" id="electro" name="categorias[]" value="Electro">
+    <label for="electro">Electro</label><br>
+
+    <input type="checkbox" id="moda" name="categorias[]" value="Moda">
+    <label for="moda">Moda</label><br>
+
+    <input type="checkbox" id="hogar" name="categorias[]" value="Hogar">
+    <label for="hogar">Hogar</label><br>
+
+    <input type="checkbox" id="jugueteria" name="categorias[]" value="Juguetería">
+    <label for="jugueteria">Juguetería</label><br>
+
+    <input type="checkbox" id="vida_sana" name="categorias[]" value="Vida sana">
+    <label for="vida_sana">Vida Sana</label><br>
+
+    <label for="foto_usuario">Foto de usuario:</label>
+    <input type="file" id="foto_usuario" name="foto_usuario" accept="image/*"><br>
+
+    <label for="contrasena">Contraseña:</label>
+    <input type="password" id="contrasena" name="contrasena" required><br>
+
+    <label for="confirmar_contrasena">Confirmar contraseña:</label>
+    <input type="password" id="confirmar_contrasena" name="confirmar_contrasena" required><br>
+
+    <input type="submit" value="Enviar">
+    <input type="reset" value="Borrar">
+  </form>
+
+  <a href="login.html">Ir a la página principal</a>
+</body>
